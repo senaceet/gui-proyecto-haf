@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Consultar aprendices</title>
+        <link href="modi_4_5_6_7.css" rel="stylesheet"/>
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <style>
+                label{
+        	font-weight: bold;
+        }
+
+        .nav-tabs .nav-item a:not(.active){
+        	background-color: #d1d3d6;
+        }
+                .nav-tabs{
+        	border-bottom:0px;
+        }
+    </style>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="instructor_interfaz.html">INSTRUCTOR - CEET</a> 
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">    
+                    <a href="index.html"><button class="btn btn-primary" type="button" >Cerrar Sesion</button></a>
+                    
+                </div>
+            </form>
+            
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Instructor</div>
+                            <a class="nav-link" href="instructor_actualizar_perfil.html">Actualizar perfil</a>
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"></div>
+                                Consultar
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="instructor_consultar_programas.html">Programas</a>
+                                    <a class="nav-link" href="instructor_consultar_fichas.html">Fichas</a>
+                                    <a class="nav-link" href="instructor_consultar_aprendices.html">Aprendices</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <div class="container" >
+
+                    <h3 class="text-center" style="color: black; font-size: 30; margin-top: 80px;">CONSULTA APRENDICES</h3>
+                    <div class="mx-auto col-12 main-section" id="myTab" role="tablist">
+                
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+                
+                                 <div class="card">
+                                     <div class="card-header">
+                                         <h4>APRENDICES</h4>
+                                     </div>
+                                     <div class="card-body"> <!-- Lista de usuarios-->
+                                        <div class="table-responsive">
+                                            <table id="userList" class="table table-bordered table-hover table-striped">
+                                                <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">Aprendiz</th>
+                                                    <th scope="col">Programa</th>
+                                                    <th scope="col">Trimestre</th>
+                                                    <th scope="col">Jornada</th>
+                                                    <th scope="col">#Ficha</th>
+                                                    <th scope="col">Visualizar</th>
+                                                   
+                
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <th scope="row">Gabriel Miranda</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Juan Morales</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Pedro Alvarez</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Jesus Serrano</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Ana Gamez</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Richard Meza</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Lucia Quintana</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Jorge Pinto</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Julian Torres</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Esteban Galindo</th>
+                                                    <td>TPS</td>
+                                                    <td>II</td>
+                                                    <td>Mañana</td>
+                                                    <td>1963872</td>
+                                                    <td><a href="#"><i class="fas fa-eye"></i></a></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>    
+                                    </div>                    
+                                </div>
+                            
+                        </div> 
+                   
+                
+            </div>
+                       
+                            
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>administrador_perfil</title>
+	
+	<!--JQUERY-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+	<!-- Nuestro css-->
+	<link rel="stylesheet" type="text/css" href="modi_4_5_6_7.css"
+		th:href="@{/css/modificacion_4_5.css}">
+
+</head>
+    <body>
+
+    <!--NAVBAR -->
+    <div class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" id="barNav">
+            <a class="navbar-brand" href="Interfaz_3.html">ADMINISTRADOR - CEET</a>
+           
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">    
+                    <a href="index.html"><button class="btn btn-primary" type="button" >Cerrar Sesion</button></a>
+                    
+                </div>
+            </form>
+            
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">USUARIOS</div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActualizar" aria-expanded="false" aria-controls="collapseActualizar">
+                                    <div class="sb-nav-link-icon">
+                                    Actualizar 
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                    <div class="collapse" id="collapseActualizar" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionActualizar">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapsePerfil" aria-expanded="false" aria-controls="actualizarCollapsePerfil">
+                                Administrador
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapsePerfil" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Perfil</a>
+                                   
+                                </nav>
+                                </div>
+                        
+    
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapseInstructor" aria-expanded="false" aria-controls="actualizarCollapseInstructor">
+                                 Instructor
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapseInstructor" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Email</a>
+                                    <a class="nav-link" href="#">Contraseña</a>
+                                    <a class="nav-link" href="#">Documento</a>
+                                    <a class="nav-link" href="#">Datos Personales</a>
+                                    <a class="nav-link" href="#">Rol</a>
+                                </nav>
+                                </div>
+                        
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapseAprendiz" aria-expanded="false" aria-controls="actualizarCollapseAprendiz">
+                                 Aprendiz
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapseAprendiz" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Email</a>
+                                    <a class="nav-link" href="#">Contraseña</a>
+                                    <a class="nav-link" href="#">Documento</a>
+                                    <a class="nav-link" href="#">Datos Personales</a>
+                                    <a class="nav-link" href="#">Rol</a>
+                                </nav>
+                                </div>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConsultar" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon">
+                                Consultar
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseConsultar" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Instructores</a> 
+                                    <a class="nav-link" href="#">Aprendices</a>                                         
+                                </nav>
+                            </div>
+                           
+       
+                        <div class="sb-sidenav-menu-heading">Fichas</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon">
+                            Asignacion
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                   Instructor
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                            </div>
+
+
+                            
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseModificacion" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon">
+                                  Modificacion
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+    
+                        <div class="collapse" id="collapseModificacion" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Fichas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a> </div> </nav> </div>
+
+
+
+    <div id="layoutSidenav_content">
+        
+            <main >
+                <div class="container" >
+                    <div class="row justify-content-center" >
+                        <div class="col-lg-12" >
+                            <div class="card shadow-lg border-0 rounded-0 " id="card">
+                                <div class="card-header" id="create"><h3 class="text-center font-weight-light my-4"><strong>ACTUALIZAR PERFIL</strong></h3></div>
+                                <div class="card-body">
+                                    <form >
+                                        <div class="form-row" >     
+                                             <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 border-0 rounded-0" for="inputTipoDocumento">Tipo documento</label>
+                                                    <select class="form-control " id="inputTipoDocumento">
+                                                    <option> -- Seleccione su tipo de doucmento -- </option>
+                                                    <option>Cedula de Ciudadanía</option>
+                                                    <option>Tarjeta de identidad</option>
+                                                    <option>Cedula de extranjería</option>
+                                                    <option>Pasaporte</option> 
+                                                    </select>
+                                                </div>                                             
+                                             </div>
+                                            <div class="col-md-6 border-0 rounded-0">
+                                                <div class="form-group  ">
+                                                    <label class="small mb-1 " for="inputNumeroDocumento">Numero de documento</label>
+                                                    <input class="form-control py-4" id="inputNumeroDocumento" type="text" placeholder="Ingrese su numero de documento"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputFirstName">Primer nombre</label>
+                                                    <input class="form-control py-4" id="inputFirstName" type="text" placeholder="Ingrese primer nombre " />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputSecondName">Segundo nombre</label>
+                                                    <input class="form-control py-4" id="inputSecondName" type="text" placeholder="Ingrese segundo nombre" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputFirstLastName">Primer apellido</label>
+                                                    <input class="form-control py-4" id="inputFirstLastName" type="text" placeholder="Ingrese primer apellido" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputSecondLastName">Segundo apellido </label>
+                                                    <input class="form-control py-4" id="inputSecondLastName" type="text" placeholder="Ingrese segundo apellido"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputTelefono">Telefono 1</label>
+                                                    <input class="form-control py-4" id="inputTelefono" type="telefono" placeholder="Ingrese su numero de contacto"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputTelefono">Telefono 2</label>
+                                                    <input class="form-control py-4" id="inputTelefono" type="telefono" placeholder="Ingrese de contacto opcional"/>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputEmailAddress">Correo</label>
+                                                    <input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Ingrese su correo institucional" />
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="small mb-1 " for="inputPassword">Contraseña</label>
+                                                        <input class="form-control py-4" id="inputPassword" type="password" placeholder="Ingreses su contraseña" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1 " for="inputConfirmPassword">Confirmar contraseña</label>
+                                                    <input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirme contraseña" />
+                                                </div>
+                                            </div>
+                                       
+                                            <br><br>
+                                            <div class="form-row" id="create" >
+                                            <div class="col-md-12">
+                                            <div class="form-group mt-4 mb-5">
+                                                <a class="btn btn-primary btn-block" href="interfaz_3.html">Guardar Cambios</a></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+                                
+
+
+
+
+</body>
+
+</html>

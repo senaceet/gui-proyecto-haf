@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>aprendiz_contraseña</title>
+	
+	<!--JQUERY-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<!-- Los iconos tipo Solid de Fontawesome-->
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+	<!-- Nuestro css-->
+	<link rel="stylesheet" type="text/css" href="modi_4_5_6_7.css"
+		th:href="@{/css/modificacion_4_5.css}">
+
+</head>
+    <body>
+
+    <!--NAVBAR -->
+    <div class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" id="barNav">
+            <a class="navbar-brand" href="Interfaz_3.html">ADMINISTRADOR - CEET</a>
+           
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                <div class="input-group">    
+                    <a href="index.html"><button class="btn btn-primary" type="button" >Cerrar Sesion</button></a>
+                    
+                </div>
+            </form>
+            
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">USUARIOS</div>
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActualizar" aria-expanded="false" aria-controls="collapseActualizar">
+                                    <div class="sb-nav-link-icon">
+                                    Actualizar 
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                    <div class="collapse" id="collapseActualizar" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionActualizar">
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapsePerfil" aria-expanded="false" aria-controls="actualizarCollapsePerfil">
+                                Administrador
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapsePerfil" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Perfil</a>
+                                   
+                                </nav>
+                                </div>
+                        
+    
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapseInstructor" aria-expanded="false" aria-controls="actualizarCollapseInstructor">
+                                 Instructor
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapseInstructor" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Email</a>
+                                    <a class="nav-link" href="#">Contraseña</a>
+                                    <a class="nav-link" href="#">Documento</a>
+                                    <a class="nav-link" href="#">Datos Personales</a>
+                                    <a class="nav-link" href="#">Rol</a>
+                                </nav>
+                                </div>
+                        
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#actualizarCollapseAprendiz" aria-expanded="false" aria-controls="actualizarCollapseAprendiz">
+                                 Aprendiz
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="actualizarCollapseAprendiz" aria-labelledby="headingOne" data-parent="#sidenavAccordionActualizar">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Email</a>
+                                    <a class="nav-link" href="#">Contraseña</a>
+                                    <a class="nav-link" href="#">Documento</a>
+                                    <a class="nav-link" href="#">Datos Personales</a>
+                                    <a class="nav-link" href="#">Rol</a>
+                                </nav>
+                                </div>
+                            </div>
+
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConsultar" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon">
+                                Consultar
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseConsultar" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="#">Instructores</a> 
+                                    <a class="nav-link" href="#">Aprendices</a>                                         
+                                </nav>
+                            </div>
+                           
+       
+                        <div class="sb-sidenav-menu-heading">Fichas</div>
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon">
+                            Asignacion
+                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                   Instructor
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                            </div>
+
+
+                            
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseModificacion" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon">
+                                  Modificacion
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                        </a>
+    
+                        <div class="collapse" id="collapseModificacion" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                    Fichas
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a> </div> </nav> </div>
+
+                                <div id="layoutSidenav_content">
+                                    <main>
+                                        <div class="container-fluid">
+                                            <h1 class="mt-4">Cambiar Contraseña Aprendiz</h1>
+                                            <ol class="breadcrumb mb-4">
+                                                <form class="user">
+                                                    <div class="form-group row">
+                                                        <div class="form-group col-sm-6 mb-3 mb-sm-0 pb-0 pt-0 mt-0">
+                                                            <select style="border-radius: 0;" id="inputState" class="form-control" style="font-size: .8rem;
+                                                            border-radius: 10rem; height: 49px;">
+                                                              <option selected>Tipo de documento...</option>
+                                                              <option>Cédula de ciudadania</option>
+                                                              <option>Tarjeta de identidad</option>
+                                                            </select>
+                                                          </div>
+                      
+                                                          <div class="col-sm-6 ">
+                                                              <input type="text" style="border-radius: 0;" class="form-control form-control-user" id="id_num_doc" placeholder="Número de documento">
+                                                            </div>
+                                                    
+                                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                                          <input type="password" style="border-radius: 0;" class="form-control form-control-user" id="contraseña1" placeholder="Nueva contraseña">
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                          <input type="password" style="border-radius: 0;" class="form-control form-control-user" id="contraseña2" placeholder="Repita la contraseña">
+                                                        </div>
+                                                    </div>
+                                                    <hr>
+                                                    <span>Para actualizar digite su contraseña</span>
+                                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                                        <input type="password" style="border-radius: 0;" class="form-control form-control-user" id="contraseña1" placeholder="Contraseña Nueva">
+                                                    </div>
+                                                    <br>
+                                                    <a href="Interfaz_3.html" style="border-radius: 0;" class="btn btn-primary btn-user btn-block">
+                                                        Cambiar Contraseña
+                                                      </a>
+                                                  </form>                        
+                                                </ol>
+                                        </div>
+                                    </main>
+                                </div>
+</body>
+</html>
